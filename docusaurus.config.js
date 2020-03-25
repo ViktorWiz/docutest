@@ -8,7 +8,7 @@ module.exports = {
   projectName: 'docutest', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'TESTESTSETET Site',
+      title: 'TESTEST Site',
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
