@@ -22,7 +22,12 @@ jobs:
     - name: Installation
       run: yarn
     - name: Docusaurus 2 Build
-      run: yarn deploy
-      env:
-        GIT_USER: ${{ secrets.SECRET_KEY }} 
+      run: yarn build
+    - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.SECRET_KEY }}
+          # use the projectName from your siteConfig.js file: https://docusaurus.io/docs/en/site-config#projectname-string
+          publish_dir: ./website/build/docutest
+ 
   
