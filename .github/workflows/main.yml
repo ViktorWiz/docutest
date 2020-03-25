@@ -23,6 +23,6 @@ jobs:
       run: yarn
     - name: Docusaurus 2 Build
       run: yarn deploy
-      with:
-        key: ${{ secrets.SECRET_KEY }} 
+      env:
+        GIT_USER: ${{ secrets.SECRET_KEY }} 
   
