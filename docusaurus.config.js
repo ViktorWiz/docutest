@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'TESTETSTETES Site',
+  title: 'TESTET Site',
   tagline: 'The tagline of my site',
   url: 'https://viktorwiz.github.io',
   baseUrl: '/docutest/',
