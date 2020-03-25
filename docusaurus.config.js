@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Test Site',
+  title: 'TESTETSTETES Site',
   tagline: 'The tagline of my site',
   url: 'https://viktorwiz.github.io',
   baseUrl: '/docutest/',
@@ -8,7 +8,7 @@ module.exports = {
   projectName: 'docutest', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'My Site',
+      title: 'TESTESTSETET Site',
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
