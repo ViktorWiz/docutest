@@ -22,7 +22,7 @@ jobs:
     - name: Installation
       run: yarn
     - name: Docusaurus 2 Build
-      run: yarn deploy
+      run: yarn build:v2
       env:
         GIT_USER: ${{ secrets.SECRET_KEY }} 
   
