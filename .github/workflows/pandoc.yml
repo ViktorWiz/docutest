@@ -8,4 +8,4 @@ jobs:
     steps:
       - uses: docker://pandoc/core:2.9
         with:
-          args: "-s -o doc1.pdf doc1.txt" # gets appended to pandoc command
+          args: "-s -o doc1.pdf doc1.md" # gets appended to pandoc command
