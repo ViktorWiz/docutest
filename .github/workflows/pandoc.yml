@@ -1,20 +1,17 @@
-name: 'Create PDF'
-description: 'Creates PDF files from github markdown'
-runs:
-  using: 'docker'
-  #image: 'docker://docker.pkg.github.com/mkrakowitzer/actions-makepdfs/makepdfs:latest'
-  image: 'docker://mkrakowitzer/actions-makepdfs:latest'
+name: Advanced Usage
 
-inputs:
-  markdown_dir:
-    description: 'Location of markdown files in github repository'
-    required: true
-    default: 'docs'
-  output_dir:
-    description: 'Location to output PDF files to'
-    required: true
-    default: 'tmp'
+on: push
 
-branding:
-  icon: 'activity'
-  color: 'green'
+jobs:
+  convert_via_pandoc:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: mkdir output
+      - uses: docker://pandoc/latex:2.9
+        with: # needs a README in your repo root!
+          args: "--standalone --output=output/doc1.pdf docs/doc1.md"
+      - uses: actions/upload-artifact@master
+        with:
+          name: output
+          path: output
