@@ -8,7 +8,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - uses: mkrakowitzer/actions-makepdfs@master
-      with:
+      env:
         markdown_dir: /docs
     - uses: actions/upload-artifact@v1
       with:
