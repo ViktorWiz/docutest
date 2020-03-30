@@ -1,16 +1,20 @@
-on: [push]
+name: 'Create PDF'
+description: 'Creates PDF files from github markdown'
+runs:
+  using: 'docker'
+  #image: 'docker://docker.pkg.github.com/mkrakowitzer/actions-makepdfs/makepdfs:latest'
+  image: 'docker://mkrakowitzer/actions-makepdfs:latest'
 
-name: CreatePDFs
+inputs:
+  markdown_dir:
+    description: 'Location of markdown files in github repository'
+    required: true
+    default: 'docs'
+  output_dir:
+    description: 'Location to output PDF files to'
+    required: true
+    default: 'tmp'
 
-jobs:
-  makepdfs:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v1
-    - uses: mkrakowitzer/actions-makepdfs@master
-      env:
-        markdown_dir: /docs
-    - uses: actions/upload-artifact@v1
-      with:
-        name: platform-architecture-docs
-        path: tmp
+branding:
+  icon: 'activity'
+  color: 'green'
