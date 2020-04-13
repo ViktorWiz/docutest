@@ -15,7 +15,37 @@
   --ifm-color-primary-lighter: rgb(102, 212, 189);
   --ifm-color-primary-lightest: rgb(146, 224, 208);
   --ifm-code-font-size: 95%;
+  --ifm-panel-border-color: rgba(0, 27, 61, 0.075);
 }
+
+/**
+ * domain-bg
+ */
+
+ .domain-bg {
+  background-image: url(/img/nodes-bg-light.svg);
+}
+
+.domain-bg.domain-bg--config {
+  background-image: url(/img/cogs-bg-light.svg);
+}
+
+.domain-bg.domain-bg--observability {
+  background-image: url(/img/charts-bg-light.svg);
+}
+
+.domain-bg.domain-bg--operations {
+  background-image: url(/img/circuit-bg-light.svg);
+}
+
+.domain-bg.domain-bg--vector {
+  background-image: url(/img/vector-bg-light.svg);
+}
+
+.domain-bg--hover:not(:hover) {
+  background-image: none !important;
+}
+
 
 .docusaurus-highlight-code-line {
   background-color: rgb(72, 77, 91);
